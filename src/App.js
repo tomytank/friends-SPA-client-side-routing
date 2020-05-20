@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import "./styles.css";
 
 import Home from "./Components/Home";
-import Friends from "./Components/Friends";
+import Friends from "./Components/FriendsList";
+import Friend from "./Components/Friend";
+import FriendsData from "./Components/FriendsData";
 
 export default function App() {
+  const [friend, setFriend] = useState(FriendsData);
+  console.log("App says friend is ", friend);
   return (
     <Router>
       <div className="App">
@@ -23,6 +27,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/friends" component={Friends} />
+          {/* <Route path="/friends/:id" component={Friend} /> */}
         </Switch>
       </div>
     </Router>
