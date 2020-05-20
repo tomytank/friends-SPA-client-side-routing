@@ -21,7 +21,7 @@ const friends = [
     nickname: "Johny bring your girlfiend home",
     description: "I met this girl today...",
     quote: "C'mon, it'll be fun...",
-    speicalAbilities: ["Late", "Finds money", "Makes  happy"]
+    specialAbilities: ["Late", "Finds money", "Makes  happy"]
   }
 ];
 

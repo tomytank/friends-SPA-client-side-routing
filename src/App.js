@@ -10,7 +10,7 @@ import FriendsData from "./Components/FriendsData";
 
 export default function App() {
   const [friends, setFriend] = useState(FriendsData);
-  console.log("App says friend is ", friends);
+  // console.log("App says friends are ", friends);
   return (
     <Router>
       <div className="App">
