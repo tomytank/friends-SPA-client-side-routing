@@ -9,8 +9,8 @@ import Friend from "./Components/Friend";
 import FriendsData from "./Components/FriendsData";
 
 export default function App() {
-  const [friend, setFriend] = useState(FriendsData);
-  console.log("App says friend is ", friend);
+  const [friends, setFriend] = useState(FriendsData);
+  console.log("App says friend is ", friends);
   return (
     <Router>
       <div className="App">
@@ -26,8 +26,8 @@ export default function App() {
         <h2>SPA Client Side Routing</h2>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/friends" component={Friends} />
-          {/* <Route path="/friends/:id" component={Friend} /> */}
+          <Route exact path="/friends" component={Friends} />
+          <Route path="/friends/:id" component={Friend} />
         </Switch>
       </div>
     </Router>
