@@ -9,7 +9,7 @@ const FriendsList = () => {
 
       {friendsData.map(friend => {
         return (
-          <div className="character-list-wrapper">
+          <div className="character-list-wrapper" key={friend.id}>
             <Link to={`/friends/${friend.id}`}>
               <div className="" key={friend.id}>
                 <h3>{friend.name}</h3>
