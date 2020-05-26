@@ -3,13 +3,11 @@ import friendsData from "./FriendsData";
 import { useParams } from "react-router-dom";
 
 export default function Friend() {
-  // const Friend = () => {
   const params = useParams();
-  // console.log("Params in Friend.js, ", params);
+  console.log("Params in Friend.js, ", params);
   const singleFriend = friendsData.find(
     thePerson => `${thePerson.id}` === params.id
   );
-  // console.log("Friend.js says singleFriend is", singleFriend);
   return (
     <div key={singleFriend.id} className="characters-list-wrapper">
       <div className="character-card" key={singleFriend.id}>

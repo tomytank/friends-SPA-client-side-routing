@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import friendsData from "./FriendsData";
 
+import "../styles.css";
+
 const FriendsList = () => {
   return (
     <div>
@@ -9,12 +11,14 @@ const FriendsList = () => {
 
       {friendsData.map(friend => {
         return (
-          <div className="character-list-wrapper" key={friend.id}>
-            <Link to={`/friends/${friend.id}`}>
-              <div className="" key={friend.id}>
-                <h3>{friend.name}</h3>
-              </div>
-            </Link>
+          <div className="character-list-wrapper">
+            <div className="router-link" key={friend.id}>
+              <Link to={`/friends/${friend.id}`}>
+                <div className="character-list-wrapper" key={friend.id}>
+                  <h3>{friend.name}</h3>
+                </div>
+              </Link>
+            </div>
           </div>
         );
       })}
