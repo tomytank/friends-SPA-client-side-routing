@@ -1,9 +1,12 @@
 import React from "react";
 import friendsData from "./FriendsData";
-import { useParams } from "react-router-dom";
+import { useParams, useRouteMatch, NavLink, Route } from "react-router-dom";
+
+import SpecialAbilities from "./SpecialAbilities";
 
 export default function Friend() {
   const params = useParams();
+  const { path, url } = useRouteMatch();
   console.log("Params in Friend.js, ", params);
   const singleFriend = friendsData.find(
     thePerson => `${thePerson.id}` === params.id
@@ -18,12 +21,21 @@ export default function Friend() {
         <p />
         <h3>Typical quote: "{singleFriend.quote}"</h3>
         <h3>Special Abilities:</h3>
-        <div>
-          {singleFriend.specialAbilities.map(item => {
-            return <h4 key={item}>{item}</h4>;
-          })}
+        <nav className="nav-buttons">
+          <button>
+            <NavLink
+              className="remove-underline"
+              to={`${url}/special-abilities`}
+            >
+              Speical Abilities
+            </NavLink>
+          </button>
+        </nav>
+        <Route path={`${path}/special-abilities`}>
+          <SpecialAbilities singleFriend={singleFriend} />
           <p />
-        </div>
+        </Route>
+        {/* </nav> */}
       </div>
     </div>
   );
