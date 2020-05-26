@@ -17,7 +17,7 @@ const friends = [
   },
   {
     id: 3,
-    name: "John ",
+    name: "John",
     nickname: "Johny bring your girlfiend home",
     description: "I met this girl today...",
     quote: "C'mon, it'll be fun...",
