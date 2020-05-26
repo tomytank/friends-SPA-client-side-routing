@@ -11,7 +11,7 @@ const FriendsList = () => {
 
       {friendsData.map(friend => {
         return (
-          <div className="character-list-wrapper">
+          <div className="character-list-wrapper" key={friend.id}>
             <div className="router-link" key={friend.id}>
               <Link to={`/friends/${friend.id}`}>
                 <div className="character-list-wrapper" key={friend.id}>

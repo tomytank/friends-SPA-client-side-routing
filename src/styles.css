@@ -45,7 +45,7 @@ body {
   text-decoration: none;
 }
 .characters-list-wrapper {
-  padding-top: 40px;
+  padding-top: 4px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -56,7 +56,7 @@ body {
   width: 30%;
   max-width: 265px;
   min-width: 220px;
-  margin: 50px 15px;
+  margin: 0px 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -112,13 +112,18 @@ body {
 }
 
 .nav-buttons {
-  margin: 16px 36px;
+  margin: 16px 50px;
   display: flex;
   justify-content: space-between;
 }
 
+.remove-underline {
+  text-decoration: none;
+}
+
 .nav-buttons > button {
   border: none;
+  text-decoration: none;
   padding: 6px 16px;
   font-size: 16px;
   background-color: #4285f4;
