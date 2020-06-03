@@ -7,6 +7,8 @@ import SpecialAbilities from "./SpecialAbilities";
 export default function Friend() {
   const params = useParams();
   const { path, url } = useRouteMatch();
+  console.log("path in friend.js ", path);
+  console.log("url in friend.js ", url);
   console.log("Params in Friend.js, ", params);
   const singleFriend = friendsData.find(
     thePerson => `${thePerson.id}` === params.id
